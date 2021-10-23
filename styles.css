@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #222;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a{
+    position: relative;
+    text-decoration: none;
+    background-color: rgb(100,100,255);
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15pt;
+    padding: 10px 30px;
+    overflow: hidden;
+    letter-spacing: 1px;
+}
+span{
+    position: relative;
+    z-index: 1;
+}
+a::before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgb(50,50,255);
+    top: var(--y);
+    left: var(--x);
+    transition: .5s;
+}
+
+a:hover::before{
+    width: 300px;
+    height: 300px;
+}
